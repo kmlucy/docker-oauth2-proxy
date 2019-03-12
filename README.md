@@ -10,4 +10,4 @@ Run:
       --client-secret=...
 ```
 
-Based on [bitly/oauth2_proxy](https://github.com/bitly/oauth2_proxy) and [wingedkiwi/oauth2-proxy-container](https://github.com/wingedkiwi/oauth2-proxy-container)
+Based on [pusher/oauth2_proxy](https://github.com/pusher/oauth2_proxy) and [wingedkiwi/oauth2-proxy-container](https://github.com/wingedkiwi/oauth2-proxy-container)
