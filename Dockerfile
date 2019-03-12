@@ -3,7 +3,7 @@ LABEL maintainer "Kyle Lucy <kmlucy@gmail.com>"
 
 ENV PATH /opt/oauth2-proxy/bin:$PATH
 
-RUN apt-get update -qq && apt-get install -y curl && \
+RUN apt-get update -qq && apt-get install -y curl ca-certificates && \
 	mkdir -p /opt/oauth2-proxy/bin && mkdir /opt/oauth2-proxy/etc && \
 	curl --silent "https://api.github.com/repos/pusher/oauth2_proxy/releases/latest" | \
 	grep -Po '"tag_name": "\K.*?(?=")' | \
