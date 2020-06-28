@@ -12,4 +12,4 @@ RUN apt-get update -qq && apt-get install -y curl ca-certificates && \
 	apt-get clean && apt-get purge -y curl && apt-get autoremove --purge -y && \
 	rm -rf /var/lib/apt-lists/* /tmp/* /var/tmp/*
 
-CMD oauth2_proxy -config=/opt/oauth2-proxy/etc/config
+CMD oauth2-proxy --config=/opt/oauth2-proxy/etc/config
