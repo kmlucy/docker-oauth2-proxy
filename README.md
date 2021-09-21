@@ -2,7 +2,7 @@
 
 Run:
 ```
- docker run -d --rm --name oauth2 kmlucy/docker-oauth2-proxy oauth2_proxy \
+ docker run -d --rm --name oauth2 ghcr.io/kmlucy/docker-oauth2-proxy oauth2_proxy \
       --email-domain="yourcompany.com" \
       --upstream=http://127.0.0.1:8080/ \
       --cookie-secret=... \
