@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:bullseye
 LABEL maintainer "Kyle Lucy <kmlucy@gmail.com>"
 
 ENV PATH /opt/oauth2-proxy/bin:$PATH
