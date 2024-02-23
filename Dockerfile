@@ -6,7 +6,7 @@ ENV PATH /opt/oauth2-proxy/bin:$PATH
 RUN apt-get update -qq && apt-get install -y curl ca-certificates && \
 	mkdir -p /opt/oauth2-proxy/bin && mkdir /opt/oauth2-proxy/etc && \
 	curl --silent "https://api.github.com/repos/oauth2-proxy/oauth2-proxy/releases/latest" | \
-	grep "linux-amd64.*tar\.gz" | grep -Po '"browser_download_url": "\K.*?(?=")' | \
+	grep "linux-amd64.*tar\.gz\"" | grep -Po '"browser_download_url": "\K.*?(?=")' | \
 	xargs -I {} curl -sL {} | \
 	tar xz --strip-components 1 -C /opt/oauth2-proxy/bin && \
 	apt-get clean && apt-get purge -y curl && apt-get autoremove --purge -y && \
